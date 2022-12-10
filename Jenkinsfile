@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         ENV_URL = "pipeline.jenkins.io"
-        SSH_CRED = credentails('SSH')
+        SSH_CRED = credentials('SSH')
     }
 
     stages {
