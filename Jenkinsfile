@@ -13,5 +13,12 @@ pipeline {
                 echo 'Hi'
             }
         }   
+    stage("Shell") {
+            steps {
+                sh '''echo hi
+                        echo hello
+                    '''   
+            }
+        }
     }
 }
