@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        ENV_URL = "pipeline.jenkins.io"
+    }
+
     stages {
         stage('Hello') {
             steps {
@@ -8,17 +12,14 @@ pipeline {
             }
         }
 
-    stage('Hi') {
-            steps {
-                echo 'Hi'
-            }
-        }   
-    stage("Shell") {
-            steps {
-                sh '''echo hi
-                        echo hello
-                    '''   
+        stage ("shell") {
+            steps{
+                sh "echo hai"
+                sh "This is sample URL : $ENV_URL"
             }
         }
+
+ 
+       
     }
 }
