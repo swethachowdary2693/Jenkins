@@ -1,8 +1,8 @@
 pipeline {
     agent any
-
     environment {
         ENV_URL = "pipeline.jenkins.io"
+        SSH_CRED = credentails('SSH')
     }
 
     stages {
@@ -15,11 +15,9 @@ pipeline {
         stage("shell") {
             steps {
                 sh "echo hai"
-                sh "This is sample URL : ${ENV_URL} "
+                sh "env"
             }
         }
 
- 
-       
     }
 }
