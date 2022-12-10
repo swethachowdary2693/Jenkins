@@ -12,8 +12,8 @@ pipeline {
             }
         }
 
-        stage ("shell") {
-            steps{
+        stage("shell") {
+            steps {
                 sh "echo hai"
                 sh "This is sample URL : ${ENV_URL} "
             }
